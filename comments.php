@@ -27,22 +27,24 @@ if ( post_password_required() ) {
 	if ( have_comments() ) :
 		?>
 		<hr class='designfly-seperator'>
-		<p class="comments-title">Comments</p><!-- .comments-title -->
+		<h2 class="comments-title"><?php esc_html_e( 'Comments', 'tangerine' ); ?></h2><!-- .comments-title -->
 		<hr class='designfly-seperator'>
 
 		<?php the_comments_navigation(); ?>
+		<br>
 
 		<ol class="comment-list">
 			<?php
 			wp_list_comments(
 				array(
-					'style'      => 'ol',
-					'short_ping' => true,
+					'style'      => 'ul',
+					'avatar_size' => 20,
+					'callback' => 'designflyCustomComments',
 				)
 			);
 			?>
 		</ol><!-- .comment-list -->
-
+		<hr>
 		<?php
 		the_comments_navigation();
 

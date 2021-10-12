@@ -181,3 +181,60 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+function designflyCustomComments( $comment, $args, $depth ) {
+	$tag = ( 'div' === $args['style'] ) ? 'div' : 'li';
+?>
+      <<?php echo $tag; ?> id="comment-<?php comment_ID(); ?>" <?php comment_class( $args['has_children'] ? 'parent' : '', $comment ); ?>>
+         <article id="div-comment-<?php comment_ID(); ?>" class="comment-body">
+            <footer class="comment-meta">
+               <div class="designfly-comment-author">
+                  <?php if ( 0 != $args['avatar_size'] ) echo get_avatar( $comment, $args['avatar_size'] ); ?>
+                  <?php echo get_comment_author_link( $comment ) . ' <span class="says">said on ' . get_comment_date('F j, Y') . ' at ' . get_comment_time() .'</span>'; ?>
+               </div><!-- .comment-author -->
+
+               <?php if ( '0' == $comment->comment_approved ) : ?>
+               <p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.' ); ?></p>
+               <?php endif; ?>
+            </footer><!-- .comment-meta -->
+
+            <div class="comment-content">
+               <?php comment_text(); ?>
+            </div><!-- .comment-content -->
+
+            <?php
+            comment_reply_link( array_merge( $args, array(
+			   'reply_text'=> 'reply',
+               'add_below' => 'div-comment',
+               'depth'     => $depth,
+               'max_depth' => $args['max_depth'],
+               'before'    => '<div class="reply">',
+               'after'     => '</div>'
+            ) ) );
+            ?>
+         </article><!-- .comment-body -->
+         <?php
+}
+
+function designfly_comment_form( $args ){
+	$args['title_reply'] = 'Post your comment';
+	$args['comment_notes_before'] = '';
+	$args['fields']['cookies'] = '';
+	$args['fields']['author'] = '<div id="comment-form-field-box"><div><label style="display: block;" for="author">Name</label><input type="text" id="author" name="author"/></div>' ;
+    $args['fields']['email']  = '<div><label style="display: block;"for="email">Email</label><input type="text" id="email" name="email"/></div>' ;
+    $args['fields']['url']    = '<div><label style="display: block;"for="url">Website</label><input type="text" id="url" name="url"/></div></div>' ;
+
+	return ($args);
+}
+
+add_filter('comment_form_defaults', 'designfly_comment_form');
+
+function designfly_comment_textarea($field) {
+
+	$field = '<p class="comment-form-comment"><textarea id="comment" name="comment"></textarea></p>';
+
+	return $field;
+}
+
+add_filter('comment_form_field_comment', 'designfly_comment_textarea');
+
+

@@ -282,3 +282,79 @@ Single Blog Page (single.php)
     margin: 0px;
 }
 
+.comment-list .url, .says {
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.comment-content {
+    font-size: 14px;
+    color: #62585f;
+    font-weight: 400;
+    line-height: 21px;
+}
+
+.reply {
+    text-align: right;
+}
+
+.reply a {
+    color: #62585f;
+}
+
+#reply-title {
+    font-size: 18px;
+    font-weight: 400;
+    color: #62585f;
+}
+
+#comment {
+    width: 620px;
+    height: 90px;
+    border: 1px solid #62585f;
+}
+
+#url, #author, #email {
+    border: 1px solid #62585f;
+}
+
+label {
+    font-size: 14px;
+    font-weight: 400;
+    color: #62585f;
+}
+
+#comment-form-field-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 620px;
+}
+
+/* 
+Sidebar
+*/
+
+#secondary {
+    margin-left: 30px;
+}
+
+#secondary h2 {
+    color: #62585f;
+    font-weight: 400;
+    font-size: 25px;
+    border-bottom: 1px solid #62585f;
+    text-shadow: 0px 2px 0px #fff;
+}
+
+#secondary ul {
+    list-style-type: none;
+    margin-left: 15px;
+    padding: 0px;
+}
+
+#secondary a {
+    color: #62585f;
+}
+
+

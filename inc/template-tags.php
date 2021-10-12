@@ -79,7 +79,7 @@ if ( ! function_exists( 'tangerine_entry_footer' ) ) :
 				sprintf(
 					wp_kses(
 						/* translators: %s: post title */
-						__( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'tangerine' ),
+						__( 'Post your comment<span class="screen-reader-text"> on %s</span>', 'tangerine' ),
 						array(
 							'span' => array(
 								'class' => array(),
