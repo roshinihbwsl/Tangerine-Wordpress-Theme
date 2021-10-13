@@ -216,12 +216,13 @@ function designflyCustomComments( $comment, $args, $depth ) {
 }
 
 function designfly_comment_form( $args ){
-	$args['title_reply'] = 'Post your comment';
+	$args['title_reply']          = 'Post your comment';
 	$args['comment_notes_before'] = '';
-	$args['fields']['cookies'] = '';
-	$args['fields']['author'] = '<div id="comment-form-field-box"><div><label style="display: block;" for="author">Name</label><input type="text" id="author" name="author"/></div>' ;
-    $args['fields']['email']  = '<div><label style="display: block;"for="email">Email</label><input type="text" id="email" name="email"/></div>' ;
-    $args['fields']['url']    = '<div><label style="display: block;"for="url">Website</label><input type="text" id="url" name="url"/></div></div>' ;
+	$args['label_submit']         = 'Submit';
+	$args['fields']['cookies']    = '';
+	$args['fields']['author']     = '<div id="comment-form-field-box"><div><label style="display: block;" for="author">Name</label><input type="text" id="author" name="author"/></div>' ;
+    $args['fields']['email']      = '<div><label style="display: block;"for="email">Email</label><input type="text" id="email" name="email"/></div>' ;
+    $args['fields']['url']        = '<div><label style="display: block;"for="url">Website</label><input type="text" id="url" name="url"/></div></div>' ;
 
 	return ($args);
 }

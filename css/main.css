@@ -28,6 +28,12 @@ a:hover {
     text-decoration: underline;
 }
 
+.designfly-content-container {
+    width: var(--width);
+    max-width: var(--max-width);
+    margin: auto;
+}
+
 /* 
 Header
 */
@@ -63,12 +69,6 @@ Header
     height: 105px;
     padding-top: 15px;
     padding-bottom: 15px;
-}
-
-.designfly-content-container {
-    width: var(--width);
-    max-width: var(--max-width);
-    margin: auto;
 }
 
 #menu-n-search-container {
@@ -334,6 +334,16 @@ label {
     flex-direction: row;
     justify-content: space-between;
     width: 620px;
+}
+
+#submit {
+    font-weight: 400;
+    font-size: 14px;
+    background-color: #222;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    float: right;
 }
 
 /* 
