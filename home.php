@@ -23,14 +23,14 @@ get_header();
             <div class="designfly-blogpost">
                 <?php the_post_thumbnail(); ?>
                 <div class="designfly-blogpost-content">
-				    <?php
+				    <span id='designfly-byline'><?php
 				    tangerine_posted_by();
 				    tangerine_posted_on();
-				    ?>
-				    <a href='#comments' style='float: right;'><?php comments_number(); ?></a>
+				    ?></span>
+				    <a href='#comments' style='float: right; font-size: 13px;'><?php comments_number(); ?></a>
 			        <hr class='designfly-seperator'>
                     <?php the_excerpt(); ?>
-                    <a href="<?php the_permalink(); ?>"><p>READ MORE</p></a>
+                    <a id="designfly-readmore"href="<?php the_permalink(); ?>"><p>READ MORE</p></a>
                 </div>
             </div>
 

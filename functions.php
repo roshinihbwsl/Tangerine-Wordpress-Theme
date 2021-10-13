@@ -237,4 +237,19 @@ function designfly_comment_textarea($field) {
 
 add_filter('comment_form_field_comment', 'designfly_comment_textarea');
 
+function wpdocs_excerpt_more( $more ) {
+    return '';
+}
+add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
+
+function wpdocs_custom_excerpt_length( $length ) {
+    return 30;
+}
+add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length');
+ 
+function designfly_thickbox() {
+   add_thickbox();
+}
+add_action('init', 'designfly_thickbox');
+
 
