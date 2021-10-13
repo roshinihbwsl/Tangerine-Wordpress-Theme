@@ -25,8 +25,8 @@ get_header();
         <?php
         if ( $query->have_posts() ) :
             while ( $query->have_posts() ) : $query->the_post(); ?>
-                <a href='#TB_inline?height=410&amp;width=480&amp;inlineId=examplePopup1' class='thickbox'><div class='designfly-portfolio-div'><?php the_post_thumbnail(); ?></div></a>
-                <div id="examplePopup1" style="display: none;">
+                <a href='#TB_inline?height=410&amp;width=480&amp;inlineId=examplePopup1<?php the_ID(); ?>'  class='thickbox'><div class='designfly-portfolio-div'><?php the_post_thumbnail(); ?></div></a>
+                <div id="examplePopup1<?php the_ID(); ?>" style="display: none;">
                     <?php the_post_thumbnail(); ?>
                     <p style='text-align: center;'>Lorem ipsum dolor sit amet</P>
                 </div>
