@@ -12,6 +12,7 @@
 ?>
 	<footer id="colophon" class="site-footer designfly-content-container">
 		<hr class='designfly-seperator'>
+		<br>
 		<div id='designfly-footer1'>
 			<div id="designfly-welcome-footer">
 				<h1>
@@ -28,6 +29,8 @@
 				<img src="<?php bloginfo( 'template_url' ); ?>/assets/home/social.png" alt="">
 			</div>
 		</div>
+		<br>
+		<br>
 		<hr class='designfly-seperator'>
 		<div id='designfly-footer2'>
 			<p>©2012 - D'SIGNfly | Designed by <span class='designfly-orange-text'>rtcamp</span></p>

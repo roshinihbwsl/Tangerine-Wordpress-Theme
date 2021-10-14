@@ -4,7 +4,7 @@
 
 :root {
     --width: 80vw;
-    --max-width: 922px;
+    --max-width: 940px;
 }
 
 body {
@@ -99,6 +99,10 @@ Header
     text-decoration: none;
 }
 
+.current-menu-item a{
+    color: #ef4634;
+}
+
 #home-banner-container {
     height: 544px;
     background-color: #e73d2d;
@@ -176,6 +180,7 @@ Header
 .feature-head-text {
     float: right;
     width: calc(100% - 60px);
+    padding-right: 10px;
 }
 
 .feature-head-text h3 {
@@ -245,6 +250,7 @@ Single Blog Page (single.php)
 
 #secondary {
     float: none;
+    margin-top: 37px;
 }
 
 #designfly-main-post {
@@ -256,6 +262,7 @@ Single Blog Page (single.php)
     font-weight: 400;
     color: #62585f;
     text-shadow: 0px 2px 0px #fff;
+    margin-top: 32px;
 }
 
 .entry-content p{
@@ -352,7 +359,7 @@ Sidebar
 
 #secondary {
     padding-left: 30px;
-    width: calc(var(--max-width) - 620px);
+    width: calc(var(--max-width) - 650px);
 }
 
 #secondary h2 {
@@ -382,7 +389,7 @@ Front Page
 	grid-template-columns: repeat(3, auto);
 	grid-template-rows: repeat(2, auto);
 	padding: 20px 0px 20px 0px;
-    grid-gap: 10px;
+    grid-gap: 20px;
 	justify-content: center;
     border-top: 1px solid #62585f;
 }
@@ -391,6 +398,13 @@ Front Page
     width: 300px;
     height: 210px;
     border-radius: 10px;
+    object-fit: cover;
+    opacity: 1;
+    transition: 0.4s opacity;
+}
+
+#front-portfolio-grid img:hover {
+    opacity: 0.3;
 }
 
 #front-portfolio-title {
@@ -399,6 +413,7 @@ Front Page
     color: #62585f;
     text-shadow: 0px 2px 0px #fff;
     margin-top: 40px;
+    margin-bottom: 20px;
 }
 
 #front-portfolio-button {
@@ -426,6 +441,10 @@ Portfolio
     margin: 20px;
     font-size: 16px;
     font-weight: 600;
+}
+
+#designfly-pagination span {
+    color: #ef4634;
 }
 
 .page-numbers, a.page-numbers {
@@ -500,7 +519,7 @@ Portfolio
     display: grid;
 	grid-template-columns: repeat(3, auto);
 	padding: 20px 0px 20px 0px;
-    grid-gap: 10px;
+    grid-gap: 20px;
 	justify-content: center;
 }
 

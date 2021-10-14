@@ -5,7 +5,7 @@ get_header();
 
 <div id='designfly-blogpage-container' class="designfly-content-container">
 	<div id="designfly-main-post">
-        <h1 id='designfly-blog-title'>LET'S BLOG</h1>
+        <h1 id='designfly-blog-title'><?php the_archive_title(); ?></h1>
         <hr class='designfly-seperator'>
 		<?php
 		while ( have_posts() ) :

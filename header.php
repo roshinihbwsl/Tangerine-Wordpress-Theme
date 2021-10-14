@@ -38,6 +38,7 @@
 						<img id='logo' src=" <?php echo get_template_directory_uri() . '/assets/home/logo.png' ?> " alt="Logo" />
 				<?php endif; ?>
 					<div id="menu-n-search-container">
+						<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'tangerine' ); ?></button>
 						<?php
 						wp_nav_menu(
 							array(
@@ -72,21 +73,21 @@
 					<img class="feature-head-img" src="<?php bloginfo( 'template_url' ); ?>/assets/home/feature-icons1.png" alt="">
 					<div class="feature-head-text">
 						<h3>Advertising</h3>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+						<p>Lorem ipsum dolor sit amet conse adipisicing elit</p>
 					</div>
 				</div>
 				<div class="feature-head-item">
 					<img class="feature-head-img" src="<?php bloginfo( 'template_url' ); ?>/assets/home/feature-icons2.png" alt="">
 					<div class="feature-head-text">
 						<h3>Multimedia</h3>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+						<p>Lorem ipsum dolor sit amet conse adipisicing elit</p>
 					</div>
 				</div>
 				<div class="feature-head-item">
 					<img class="feature-head-img" src="<?php bloginfo( 'template_url' ); ?>/assets/home/feature-icons3.png" alt="">
 					<div class="feature-head-text">
 						<h3>Photography</h3>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+						<p>Lorem ipsum dolor sit amet conse adipisicing elit</p>
 					</div>
 				</div>
 			</div>

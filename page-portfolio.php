@@ -4,9 +4,9 @@ get_header();
     <div class='designfly-content-container'>
     <div id='designfly-portfolio-head'>
         <h1>DESIGN IS THE SOUL</h1>
-        <button>Advertising</button>
-        <button>Multimedia</button>
-        <button>Photography</button>
+        <a href="<?php echo home_url('/category/advertising'); ?>"><button>Advertising</button></a>
+        <a href="<?php echo home_url('/category/multimedia'); ?>"><button>Multimedia</button></a>
+        <a href="<?php echo home_url('/category/photography'); ?>"><button>Photography</button></a>
     </div>
     <hr class='designfly-seperator'>
     <?php
